@@ -25,8 +25,12 @@
 					<li><a href="#">Nav Link 5</a></li>
 					<li><a href="#">Nav Link 6</a></li>
 					<li><a href="#">Nav Link 7</a></li>
-					<!-- Buttons for Task 3 and Task 4 should be placed here -->
-					
+
+                    <!-- Buttons for Task 3 and Task 4 should be placed here -->
+                    <!-- Task 3 -->
+                    <li><button onclick="textChange()">Click Me</button></li>
+                    <!-- Task 4 -->
+                    <li><button onclick="textChange()">Clear</button></li>
 				</ul>
 			</div>
 		</div>
@@ -38,7 +42,7 @@
 
 					<!-- Paragraphs -->
 					<h3>Basic Directions</h3>
-					<p>This project is meant to assess your understanding of Javascript usage within a webpage.  There are five tasks that you must complete.  The tasks are functionality that will be added to this page.  Inside of the folder you found this html file, you will see a folder called "assets".  Within that, another folder called "javascript" has 5 files labeled task1.js to task5.js.  For each task, place your javascript code within the appropriate file.  The files are already linked to this page in the <b>head</b> of this document.  The instructions for each task are listed below.</p>
+					<p id="directions">This project is meant to assess your understanding of Javascript usage within a webpage.  There are five tasks that you must complete.  The tasks are functionality that will be added to this page.  Inside of the folder you found this html file, you will see a folder called "assets".  Within that, another folder called "javascript" has 5 files labeled task1.js to task5.js.  For each task, place your javascript code within the appropriate file.  The files are already linked to this page in the <b>head</b> of this document.  The instructions for each task are listed below.</p>
 					<hr>
 
 					<h3>Tasks</h3>
@@ -68,9 +72,11 @@
 										
 					<h3>Task 2 - The Table</h3>
 					<!-- Buttons for this task should be entered before the table tag. -->
-					<button>Red</button>
-					
-					<table class="table table-striped">
+                    <button onclick="redTable()" id="redButton">Red</button>
+                    <button onclick="blueTable()" id="blueButton">Blue</button>
+                    <button onclick="yellowTable()" id="yellowButton">Yellow</button>
+
+                    <table class="table table-striped" id="table">
 						<thead>
 							<tr>
 								<th>#</th>
@@ -110,18 +116,18 @@
 						</thead>
 						<tr>
 							<td>Name:</td>
-							<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName"></td>
+							<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName" onkeydown="checkBox1()"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input type="text" name="address" placeholder="Enter your address." id="address"></td>
+							<td><input type="text" name="address" placeholder="Enter your address." id="address" onkeydown="checkBox2()"></td>
 						</tr>
 						<tr>
 							<td>Phone:</td>
-							<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone"></td>
+							<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone" onkeydown="checkBox3()"></td>
 						<tr>
 							<td>Email:</td>
-							<td><input type="text" name="email" placeholder="Enter your email address." id="email"></td>
+							<td><input type="text" name="email" placeholder="Enter your email address." id="email" onkeydown="checkBox4()"></td>
 						</tr>
 						<tr>
 							<td colspan="2"><button>Submit</button></td>
