@@ -30,7 +30,7 @@
                     <!-- Task 3 -->
                     <li><button onclick="textChange()">Click Me</button></li>
                     <!-- Task 4 -->
-                    <li><button onclick="textChange()">Clear</button></li>
+                    <li><button><a target="_blank" href="Open.html">Clear</a></button></li>
 				</ul>
 			</div>
 		</div>
@@ -115,19 +115,20 @@
 							</tr>
 						</thead>
 						<tr>
+                            <!-- Checks each box when clicked or typed in -->
 							<td>Name:</td>
-							<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName" onkeydown="checkBox1()"></td>
+							<td><input type="text" name="fullName" placeholder="Enter your full name." id="fullName"  onclick="checkBox1()" onkeyup="checkBox1()"></td>
 						</tr>
 						<tr>
 							<td>Address:</td>
-							<td><input type="text" name="address" placeholder="Enter your address." id="address" onkeydown="checkBox2()"></td>
+							<td><input type="text" name="address" placeholder="Enter your address." id="address" onclick="checkBox2()" onkeyup="checkBox2()"></td>
 						</tr>
 						<tr>
 							<td>Phone:</td>
-							<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone" onkeydown="checkBox3()"></td>
+							<td><input type="text" name="phone" placeholder="Enter your phone number." id="phone" onclick="checkBox3()" onkeyup="checkBox3()"></td>
 						<tr>
 							<td>Email:</td>
-							<td><input type="text" name="email" placeholder="Enter your email address." id="email" onkeydown="checkBox4()"></td>
+							<td><input type="text" name="email" placeholder="Enter your email address." id="email" onclick="checkBox4()" onkeyup="checkBox4()"></td>
 						</tr>
 						<tr>
 							<td colspan="2"><button>Submit</button></td>
